@@ -1,0 +1,29 @@
+services:
+  - name: default
+    type: ip
+    address: any
+    valid: true
+    allowed_rps: 10
+    wait_time_if_limit_exceeded: "1m"
+
+  - name: service-a
+    type: token
+    key: "abcd1234"
+    valid: true
+    allowed_rps: 20
+    wait_time_if_limit_exceeded: "10s"
+
+  - name: service-b
+    type: token
+    key: "efgh5678"
+    valid: false
+    allowed_rps: 30
+    wait_time_if_limit_exceeded: "5s"
+
+  - name: service-c
+    type: token
+    key: "ijkl91011"
+    valid: true
+    allowed_rps: 60
+    wait_time_if_limit_exceeded: "5s"
+  

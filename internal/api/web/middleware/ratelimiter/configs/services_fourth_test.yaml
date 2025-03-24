@@ -1,0 +1,21 @@
+services:
+  - name: default
+    type: ip
+    address: any
+    valid: true
+    allowed_rps: 10
+    wait_time_if_limit_exceeded: "5m"
+
+  - name: service-b
+    type: token
+    key: "abcd1234"
+    valid: true
+    allowed_rps: 1
+    wait_time_if_limit_exceeded: "10s"
+
+  - name: service-b
+    type: token
+    key: "abcd1234"
+    valid: true
+    allowed_rps: 20
+    wait_time_if_limit_exceeded: "10s"
