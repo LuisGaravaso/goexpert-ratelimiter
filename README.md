@@ -143,7 +143,7 @@ seq 1 25 | xargs -n 1 -P 25 -I {} bash -c '
 
 **Como Output você verá:**
 
-```json
+```bash
 First Request: {"message":"Hello, service-a"}
 Last Request: {"message":"Rate limit excedido para o serviço 'service-a': 20 requisições permitidas por segundo. Bloqueado até 15:47:00."}
 ```
